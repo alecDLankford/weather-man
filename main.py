@@ -1,8 +1,9 @@
-from helpers.coordinate_finder import get_coordinates
 from flask import Flask, jsonify
+import requests
+from helpers.coordinate_finder import get_coordinates
 from constants import openWeatherKey
-from openAI.ai_weather_reporter import generate_weather_report
-import requests;
+from weather_report.ai_weather_reporter import generate_weather_report
+
 
 
 
