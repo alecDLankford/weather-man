@@ -2,7 +2,7 @@
 
 ## Description
 
-This project provides a web service that fetches weather information for a specified location and generates a localized weather report using AI. The service integrates with the OpenWeatherMap API to retrieve weather data and uses OpenAI's GPT-4o-mini model to produce a natural-sounding weather report with local flair.
+This project provides a web service that fetches weather information for a specified location and generates a localized weather report using AI. The service integrates with the OpenWeatherMap API to retrieve weather data and uses OpenAI's GPT-4o-mini model to produce a natural-sounding weather report with local flair, in an attempt to mimic your local weather man or woman!
 
 ## Files
 
