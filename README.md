@@ -2,7 +2,7 @@
 
 ## Description
 
-This project provides a web service that fetches weather information for a specified location and generates a localized weather report using AI. The service integrates with the OpenWeatherMap API to retrieve weather data and uses OpenAI's GPT-4o-mini model to produce a natural-sounding weather report with local flair.
+This project provides a web service that fetches weather information for a specified location and generates a localized weather report using AI. The service integrates with the OpenWeatherMap API to retrieve weather data and uses OpenAI's GPT-4o-mini model to produce a natural-sounding weather report with local flair, in an attempt to mimic your local weather man or woman!
 
 ## Files
 
@@ -12,9 +12,9 @@ This module contains a function to obtain geographical coordinates (latitude and
 
 - **Function:** `get_coordinates(city: str, state: str) -> tuple[float, float]`
 
-  - **Inputs:** City and state names.
+- **Inputs:** City and state names.
 
-  - **Outputs:** Tuple containing latitude and longitude. Returns `(None, None)` if the location cannot be found.
+- **Outputs:** Tuple containing latitude and longitude. Returns `(None, None)` if the location cannot be found.
 
 ### `ai_weather_reporter.py`
 
@@ -22,9 +22,9 @@ This module generates a weather report using the OpenAI GPT-4o-mini model based 
 
 - **Function:** `generate_weather_report(data)`
 
-  - **Inputs:** Weather data in JSON format.
+- **Inputs:** Weather data in JSON format.
 
-  - **Outputs:** AI-generated weather report as a string. The response includes a description of the weather, temperature, and suggestions for clothing or activities.
+- **Outputs:** AI-generated weather report as a string. The response includes a description of the weather, temperature, and suggestions for clothing or activities.
 
 ### `main.py`
 
@@ -124,17 +124,17 @@ This script sets up a Flask web server that interacts with the OpenWeatherMap AP
 
 ## Bug Reporting
 
-If you come across and bugs, please feel free to open an issue.
+If you come across any bugs, please feel free to open an issue.
 
 ## Acknowledgements
 
-- **OpenWeatherMap** for weather data.
+- **[OpenWeatherMap](https://openweathermap.org/guide)** for weather data.
 
-- **OpenAI** for the GPT-4o-mini model.
+- **[OpenAI](https://platform.openai.com/docs/overview)** for the GPT-4o-mini model.
 
-- **Geopy** for geocoding functionality.
+- **[Geopy](https://geopy.readthedocs.io/en/stable/)** for geocoding functionality.
 
-- **Flask** for web framework.
+- **[Flask](https://flask.palletsprojects.com/en/3.0.x/)** for web framework.
 
 ## Contact Information
 
