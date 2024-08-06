@@ -96,8 +96,6 @@ This script sets up a Flask web server that interacts with the OpenWeatherMap AP
 
 - **Example Response:**
 
-  ```json
-
   {
 
     "weather_report": "Currently in New York, the weather is described as clear sky. The temperature is 75°F with a feels-like temperature of 77°F. The high for today is 80°F and the low is 70°F. Humidity is at 60%, and wind speed is 5 m/s. It's a beautiful day to go outside and enjoy some fresh air. Wear light clothing and enjoy a stroll in the park!"
@@ -111,6 +109,7 @@ This script sets up a Flask web server that interacts with the OpenWeatherMap AP
 - **API Keys:**
 
   - Ensure you have a valid API key for OpenWeatherMap and set it in the `.env` file.
+  - Ensure you have a valid OpenAI key.
 
 ## Contributing
 
