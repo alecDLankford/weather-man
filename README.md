@@ -126,10 +126,6 @@ This script sets up a Flask web server that interacts with the OpenWeatherMap AP
 
 If you come across and bugs, please feel free to open an issue.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgements
 
 - **OpenWeatherMap** for weather data.
