@@ -8,7 +8,7 @@ import requests;
 
 app = Flask(__name__)
 
-base_url = "https://api.openweathermap.org/data/2.5/weather"
+BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
 
 @app.route('/weather/<city>/<state>/<units>', methods=['GET'])
 def get_current_weather(city, state, units):
@@ -22,8 +22,8 @@ def get_current_weather(city, state, units):
         'appid': openWeatherKey,
         'units': 'imperial',
     }
-    
-    full_url = requests.Request('GET', base_url, params=params).prepare().url
+
+    full_url = requests.Request('GET', BASE_URL, params=params).prepare().url
     response = requests.get(base_url, params=params)
 
     if response.status_code == 200:

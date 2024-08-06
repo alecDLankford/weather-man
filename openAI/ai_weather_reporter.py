@@ -19,7 +19,7 @@ def generate_weather_report(data):
         f"The high for today is {temp_max}° and the low is {temp_min}°. "
         f"Humidity is at {humidity}%, and wind speed is {wind_speed} m/s."
     )
-    
+
     # Generate the AI response
     response = client.chat.completions.create(
         model="gpt-4o-mini",
@@ -31,6 +31,5 @@ def generate_weather_report(data):
 
     # Correctly extract the content from the response
     ai_response = response.choices[0].message.content
-    print(ai_response)
-    
+
     return ai_response
