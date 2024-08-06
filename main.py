@@ -1,6 +1,7 @@
-from locationAPI import get_coordinates
+from helpers.coordinate_finder import get_coordinates
 from flask import Flask, jsonify
 from constants import openWeatherKey
+from openAI.ai_weather_reporter import generate_weather_report
 import requests;
 
 
@@ -28,11 +29,10 @@ def get_current_weather(city, state, units):
 
     if response.status_code == 200:
         data = response.json()
-        print(data)
-        print("success")
-        return data
+        weather_report = generate_weather_report(data)
+        # Extract the OpenAI response
+        return jsonify({"weather_report": weather_report})
     else:
-        print("error")
         return f"Error: {response.status_code}"
 
 
