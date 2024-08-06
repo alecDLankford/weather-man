@@ -24,7 +24,6 @@ def get_current_weather(city, state, units):
     }
     
     full_url = requests.Request('GET', base_url, params=params).prepare().url
-    print(f"Requesting URL: {full_url}")
     response = requests.get(base_url, params=params)
 
     if response.status_code == 200:
