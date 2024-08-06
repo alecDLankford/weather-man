@@ -1,6 +1,8 @@
 from locationAPI import get_coordinates
 from flask import Flask, jsonify
+from constants import openWeatherKey
 import requests;
+
 
 
 app = Flask(__name__)
@@ -16,7 +18,7 @@ def get_current_weather(city, state, units):
     params = {
         'lat': coordinates[0],
         'lon': coordinates[1],
-        'appid': '',
+        'appid': openWeatherKey,
         'units': 'imperial',
     }
     
