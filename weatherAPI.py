@@ -16,7 +16,7 @@ def get_current_weather(city, state, units):
     params = {
         'lat': coordinates[0],
         'lon': coordinates[1],
-        'appid': '6c5dcc919f951a732fd74b35e9914440',
+        'appid': '',
         'units': 'imperial',
     }
     
