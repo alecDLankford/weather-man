@@ -48,13 +48,17 @@ This script sets up a Flask web server that interacts with the OpenWeatherMap AP
 
 1\. **Clone the Repository:**
 
-   git clone https://github.com/alecDLankford/weather-report-generator.git
+   ```bash
+
+   git clone https://github.com/your-username/weather-report-generator.git
 
    cd weather-report-generator
 
    ```
 
 2\. **Install Dependencies:**
+
+   ```bash
 
    pip install -r requirements.txt
 
@@ -64,6 +68,8 @@ This script sets up a Flask web server that interacts with the OpenWeatherMap AP
 
    - Create a `.env` file in the root directory with your OpenWeatherMap API key:
 
+     ```bash
+
      OPENWEATHER_API_KEY=your_api_key_here
 
      ```
@@ -71,6 +77,8 @@ This script sets up a Flask web server that interacts with the OpenWeatherMap AP
 ## Usage
 
 1\. **Start the Flask Server:**
+
+   ```bash
 
    python main.py
 
@@ -90,11 +98,15 @@ This script sets up a Flask web server that interacts with the OpenWeatherMap AP
 
 - **Example Request:**
 
+  ```bash
+
   curl "http://127.0.0.1:5000/weather/New%20York/NY/imperial"
 
   ```
 
 - **Example Response:**
+
+  ```json
 
   {
 
@@ -131,4 +143,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact Information
 
-For any questions or feedback, please contact Alec Lankford(alec.d.lankford@gmail.com).
+For any questions or feedback, please contact Alec Lankford (alec.d.lankford@gmail.com).
