@@ -128,13 +128,13 @@ If you come across any bugs, please feel free to open an issue.
 
 ## Acknowledgements
 
-- **OpenWeatherMap** for weather data.
+- **[OpenWeatherMap](https://openweathermap.org/guide)** for weather data.
 
-- **OpenAI** for the GPT-4o-mini model.
+- **[OpenAI](https://platform.openai.com/docs/overview)** for the GPT-4o-mini model.
 
-- **Geopy** for geocoding functionality.
+- **[Geopy](https://geopy.readthedocs.io/en/stable/)** for geocoding functionality.
 
-- **Flask** for web framework.
+- **[Flask](https://flask.palletsprojects.com/en/3.0.x/)** for web framework.
 
 ## Contact Information
 
