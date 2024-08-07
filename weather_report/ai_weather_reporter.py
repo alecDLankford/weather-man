@@ -14,7 +14,7 @@ def validate_weather_data(data):
         'temp_min': data['main'].get('temp_min')
     }
 
-    for field, value in required_fields.items():
+    for _, value in required_fields.items():
         if value is None or (isinstance(value, str) and value.strip() == ''):
             return None
 
