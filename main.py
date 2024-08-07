@@ -10,7 +10,7 @@ BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
 
 @app.route('/weather/<city>/<state>/<units>', methods=['GET'])
 def get_current_weather(city, state, units):
-    coordinates = get_coordinates(city, state)  
+    coordinates = get_coordinates(city, state)
     if coordinates[0] is None or coordinates[1] is None:
         return jsonify({"error": "Invalid coordinates"}), 400
 
