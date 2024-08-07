@@ -21,8 +21,11 @@ def get_current_weather(city, state, units):
         'units': units,
     }
 
-
-    response = requests.get(BASE_URL, params=params)
+    try:
+        response = requests.get(BASE_URL, params=params, timeout=20)
+        response.raise_for_status()
+    except requests.RequestException as e:
+        return jsonify({"Error": str(e)}), 500
 
     if response.status_code == 200:
         data = response.json()
