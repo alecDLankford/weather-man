@@ -5,3 +5,6 @@ disable=missing-module-docstring,
 
 [FORMAT]
 max-line-length=350
+
+[TYPECHECK]
+ignored-modules=openai
