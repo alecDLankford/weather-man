@@ -4,9 +4,6 @@ from helpers.coordinate_finder import get_coordinates
 # from constants import openWeatherKey
 from weather_report.ai_weather_reporter import generate_weather_report
 
-
-
-
 app = Flask(__name__)
 
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
@@ -20,8 +17,8 @@ def get_current_weather(city, state, units):
     params = {
         'lat': coordinates[0],
         'lon': coordinates[1],
-        'appid': openWeatherKey,
-        'units': 'imperial',
+        'appid': 'YOUR_KEY_HERE',
+        'units': units,
     }
 
 

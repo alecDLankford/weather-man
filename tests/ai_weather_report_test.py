@@ -43,7 +43,7 @@ class TestWeatherDataValidation(unittest.TestCase):
         }
         result = validate_weather_data(data)
         self.assertIsNone(result)
-    
+
     def test_empty_field(self):
         data = {
             'weather': [{'description': 'clear sky'}],
