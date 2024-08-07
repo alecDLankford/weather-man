@@ -119,7 +119,7 @@ This script sets up a Flask web server that interacts with the OpenWeatherMap AP
 ## Configuration
 
 - **API Keys:**
-  - Ensure you have a valid API key for OpenWeatherMap and set it in the `.env` file.
+  - Ensure you have a valid API key for OpenWeatherMap and set it in a `.env` or constants file.
   - Ensure you have a valid OpenAI key.
 
 ## Bug Reporting
