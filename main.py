@@ -28,8 +28,8 @@ def get_current_weather(city, state, units):
         data = response.json()
         weather_report = generate_weather_report(data)
         return jsonify({"weather_report": weather_report})
-    else:
-        return f"Error: {response.status_code}"
+
+    return f"Error: {response.status_code}"
 
 
 
