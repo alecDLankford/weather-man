@@ -1,6 +1,4 @@
-from openai import OpenAI
-
-client = OpenAI()
+import openai
 
 def validate_weather_data(data):
     required_fields = {
@@ -43,7 +41,7 @@ def generate_weather_report(data):
         f"Humidity is at {humidity}%, and wind speed is {wind_speed} m/s."
     )
 
-    response = client.chat.completions.create(
+    response = openai.chat.completions.create(
         model="gpt-4o-mini",
         messages=[{
             "role": "system",
