@@ -10,5 +10,5 @@ def get_coordinates(city: str, state: str) -> tuple[float, float]:
         latitude = location.latitude
         print("lat", latitude, "long", longitude)
         return (latitude, longitude)
-    else:
-        return (None, None)
+
+    return (None, None)
