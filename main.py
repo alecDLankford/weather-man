@@ -1,10 +1,12 @@
 from flask import Flask, jsonify
 import requests
 from helpers.coordinate_finder import get_coordinates
+from flask_cors import CORS
 # from constants import openWeatherKey
 from weather_report.ai_weather_reporter import generate_weather_report
 
 app = Flask(__name__)
+CORS(app)
 
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
 
@@ -17,7 +19,7 @@ def get_current_weather(city, state, units):
     params = {
         'lat': coordinates[0],
         'lon': coordinates[1],
-        'appid': 'YOUR_KEY_HERE',
+        'appid': '2553115b8bda969d8c243b8bdf59101e',
         'units': units,
     }
 
