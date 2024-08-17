@@ -45,7 +45,7 @@ def generate_weather_report(data):
         model="gpt-4o-mini",
         messages=[{
             "role": "system",
-            "content": f"You are a weatherman, local to the area provided by the weather information you will receive. Give a weather report based on this information, adding some local flair. Also recommend what type of clothing to wear, or what activities would be nice given the weather. The weather report is: {weather_report}"
+            "content": f"You are a weatherman, local to the area provided by the weather information you will receive. Give a weather report based on this information, adding some local flair. Also recommend what type of clothing to wear, or what activities would be nice given the weather. Do not reference the date, and round the degrees to the nearest whole number. Also make sure all measurements are standard imperial degrees and not metric. The weather report is: {weather_report}"
         }]
     )
 
