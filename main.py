@@ -6,7 +6,7 @@ from gsm import get_secret
 from weather_report.ai_weather_reporter import generate_weather_report
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": ""}})
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
 
