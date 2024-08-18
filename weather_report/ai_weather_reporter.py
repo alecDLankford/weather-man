@@ -1,4 +1,4 @@
-import openai
+from openai import OpenAI
 from gsm import get_secret
 
 def validate_weather_data(data):
@@ -20,7 +20,8 @@ def validate_weather_data(data):
     return required_fields
 
 def generate_weather_report(data):
-    openai.api_key = get_secret("open_ai")
+    client = OpenAI(api_key = get_secret("open_ai"))
+    
     validated_data = validate_weather_data(data)
 
     if validated_data is None:
@@ -42,7 +43,7 @@ def generate_weather_report(data):
         f"Humidity is at {humidity}%, and wind speed is {wind_speed} m/s."
     )
 
-    response = openai.chat.completions.create(
+    response = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[{
             "role": "system",
