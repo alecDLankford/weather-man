@@ -2,11 +2,11 @@ from flask import Flask, jsonify
 import requests
 from flask_cors import CORS
 from helpers.coordinate_finder import get_coordinates
-# from constants import OPEN_WEATHER_KEY
+from gsm import getSecret
 from weather_report.ai_weather_reporter import generate_weather_report
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": ""}})
 
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
 
@@ -15,11 +15,10 @@ def get_current_weather(city, state, units):
     coordinates = get_coordinates(city, state)
     if coordinates[0] is None or coordinates[1] is None:
         return jsonify({"error": "Invalid coordinates"}), 400
-
     params = {
         'lat': coordinates[0],
         'lon': coordinates[1],
-        'appid': 'OPEN_WEATHER_KEY',
+        'appid': getSecret("open-weather"),
         'units': units,
     }
 
