@@ -4,7 +4,7 @@ disable=missing-module-docstring,
         missing-class-docstring
 
 [FORMAT]
-max-line-length=500
+max-line-length=350
 
 [TYPECHECK]
 ignored-modules=openai
