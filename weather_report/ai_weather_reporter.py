@@ -1,4 +1,5 @@
 import openai
+from gsm import get_secret
 
 def validate_weather_data(data):
     required_fields = {
@@ -19,7 +20,7 @@ def validate_weather_data(data):
     return required_fields
 
 def generate_weather_report(data):
-
+    openai.api_key = get_secret("open_ai")
     validated_data = validate_weather_data(data)
 
     if validated_data is None:
