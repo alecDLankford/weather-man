@@ -1,4 +1,3 @@
-import os
 from google.cloud import secretmanager
 
 def getSecret(secret_id):
