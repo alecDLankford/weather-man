@@ -21,7 +21,7 @@ def validate_weather_data(data):
 
 def generate_weather_report(data):
     client = OpenAI(api_key = get_secret("open_ai"))
-    
+
     validated_data = validate_weather_data(data)
 
     if validated_data is None:
