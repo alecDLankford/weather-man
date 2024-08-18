@@ -1,6 +1,6 @@
 from google.cloud import secretmanager
 
-def getSecret(secret_id):
+def get_secret(secret_id):
     project_id = "groovy-autumn-432923-k6"
     version_id = "latest"
 

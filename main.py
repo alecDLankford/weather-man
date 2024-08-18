@@ -2,7 +2,7 @@ from flask import Flask, jsonify
 import requests
 from flask_cors import CORS
 from helpers.coordinate_finder import get_coordinates
-from gsm import getSecret
+from gsm import get_secret
 from weather_report.ai_weather_reporter import generate_weather_report
 
 app = Flask(__name__)
@@ -18,7 +18,7 @@ def get_current_weather(city, state, units):
     params = {
         'lat': coordinates[0],
         'lon': coordinates[1],
-        'appid': getSecret("open-weather"),
+        'appid': get_secret("open-weather"),
         'units': units,
     }
 
